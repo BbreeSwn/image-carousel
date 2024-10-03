@@ -1,6 +1,6 @@
 const ImageData = [
     {
-        title: "When the sun down",
+        title: "Happy Christmas",
         image: 'https://cdn.pixabay.com/photo/2019/11/23/07/24/christmas-4646421_1280.jpg'
     },
     {

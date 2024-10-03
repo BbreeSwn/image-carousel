@@ -1,3 +1,12 @@
+body{
+    background: #121312;
+    text-align: center;
+    font: 1.5rem;
+    color: white;
+    font-weight: 700;
+    font-size: xx-large;
+}
+
 .image{
 width: 600px;
 height: 400px;
@@ -13,7 +22,7 @@ border-radius: 5px;
 
 .arrowLeft{
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 150px;
     font-size: 4rem;
     z-index: 10;
@@ -22,7 +31,7 @@ border-radius: 5px;
 
 .arrowRight{
     position: absolute;
-    top: 50%;
+    top: 40%;
     right: 150px;
     font-size: 4rem;
     z-index: 10;
@@ -31,31 +40,44 @@ border-radius: 5px;
 
 .slide{
     opacity: 0;
+    transition: 1s ;
 }
 .slide.active{
     opacity: 1;
+    transform: scale(1.08);
+    animation-timing-function: ease-in-out;
+    transition-duration: 1s;
 }
 
 @media (max-width: 790px){
+    h1{
+        font-size: xx-large;
+    }
+    body {
+        font-size: larger;
+    }
     .image{
-        width: 300px;
-        height: 200px;
+        width: 250px;
+        height: 150px;
         border-radius: 5px;
+        }
+        .slider{
+        height: fit-content;
         }
         .arrowLeft{
             position: absolute;
-            top: 45%;
-            left: 5px;
-            font-size: 2.5rem;
+            top: 30%;
+            left: 2px;
+            font-size: 2rem;
             z-index: 10;
             cursor: pointer;
         }
         
         .arrowRight{
             position: absolute;
-            top: 45%;
-            right: 5px;
-            font-size: 2.5rem;
+            top: 30%;
+            right: 2px;
+            font-size: 2rem;
             z-index: 10;
             cursor: pointer;
         }

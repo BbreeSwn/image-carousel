@@ -24,10 +24,12 @@ const ImageSlider = () => {
             className={index === current ? "slide active" : "slide"}
             key={index}
           >
-            <div>
-              <img src={data.image} alt={data.title} className="image" />
-              <p>{data.title}</p>
-            </div>
+            {index === current && (
+              <div>
+                <img src={data.image} alt={data.title} className="image" />
+                <p>{data.title}</p>
+              </div>
+            )}
           </div>
         );
       })}
