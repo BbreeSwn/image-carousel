@@ -8,7 +8,7 @@ const ImageSlider = () => {
         return (
           <div className="slide" key={index}>
             <div>
-                <img src={data.image} alt={data.title}/>
+                <img src={data.image} alt={data.title} className='image' />
                 <p>{data.title}</p>
             </div>
           </div>
