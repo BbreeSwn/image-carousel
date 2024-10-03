@@ -4,12 +4,14 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const ImageSlider = () => {
   const [current, setCurrent] = useState(0);
+  const length = ImageData.length;
 
   const prevSlide = () => {
-    setCurrent(current - 1);
+    current === 0 ? setCurrent(length - 1) : setCurrent(current - 1);
   };
+
   const nextSlide = () => {
-    setCurrent(current + 1);
+    current === length - 1 ? setCurrent(0) : setCurrent(current + 1);
   };
 
   return (
@@ -17,9 +19,11 @@ const ImageSlider = () => {
       <FaArrowLeft className="arrowLeft" onClick={prevSlide} />
       <FaArrowRight className="arrowRight" onClick={nextSlide} />
       {ImageData.map((data, index) => {
-
         return (
-          <div className={index === current? "slide active" : 'slide'} key={index}>
+          <div
+            className={index === current ? "slide active" : "slide"}
+            key={index}
+          >
             <div>
               <img src={data.image} alt={data.title} className="image" />
               <p>{data.title}</p>
